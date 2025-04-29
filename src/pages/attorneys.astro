@@ -1,0 +1,28 @@
+---
+import Header from '../components/Header';
+import Footer from '../components/Footer.astro';
+import AttorneyCard from '../components/AttorneyCard.astro';
+
+const attorneys = [
+  { name: "John Doe", title: "Senior Partner", image: "/john.jpg" },
+  { name: "Jane Smith", title: "Family Law Specialist", image: "/jane.jpg" },
+];
+---
+<html lang="en">
+  <head>
+    <title>Our Attorneys - Justice & Co.</title>
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <Header client:load/>
+    <main class="flex-grow p-8">
+      <h1 class="text-3xl font-bold mb-6 text-center">Meet Our Team</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {attorneys.map(attorney => (
+          <AttorneyCard {...attorney} />
+        ))}
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

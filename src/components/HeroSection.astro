@@ -1,0 +1,36 @@
+---
+import teamImg from '../assets/images/legal-team.jpeg';
+---
+<section class="bg-gray-100 py-16 px-6 lg:px-0">
+    <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+      <!-- Left: Text Content -->
+      <div class="flex-1 text-center lg:text-left">
+        <h2 class="text-5xl font-bold text-gray-800 mb-6 leading-tight">
+          Your Trusted Legal Partner for Life’s Toughest Moments
+        </h2>
+        <p class="text-lg text-gray-600 mb-4 max-w-xl">
+          With over 20 years of combined experience, our dedicated legal team offers compassionate, strategic, and aggressive representation across family law, business law, criminal defense, and personal injury.
+        </p>
+        <p class="text-lg text-gray-600 mb-4 max-w-xl">
+          We take pride in providing personalized legal solutions tailored to your unique circumstances, ensuring you’re supported every step of the way—from consultation to courtroom.
+        </p>
+        <p class="text-lg text-gray-600 mb-6 max-w-xl">
+          Whether you’re facing a dispute, launching a business, or seeking justice, we stand by your side to protect your rights and pursue the outcome you deserve.
+        </p>
+        <a href="/contact" class="inline-block bg-blue-700 hover:bg-blue-800 text-white text-lg font-semibold px-6 py-3 rounded shadow">
+          Schedule a Free Consultation
+        </a>
+      </div>
+  
+      <!-- Right: Hero Image -->
+      <div class="flex-1">
+        <img 
+          src={teamImg.src} 
+          alt="Professional law team in office" 
+          class="rounded-lg shadow-lg w-full object-cover max-h-[500px]" 
+          loading="lazy"
+        />
+      </div>
+    </div>
+  </section>
+  

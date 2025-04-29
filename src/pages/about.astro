@@ -1,0 +1,23 @@
+---
+import Header from '../components/Header';
+import Footer from '../components/Footer.astro';
+---
+<html lang="en">
+  <head>
+    <title>About Us - Justice & Co.</title>
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <Header client:load/>
+    <main class="flex-grow p-8 max-w-3xl mx-auto">
+      <h1 class="text-3xl font-bold mb-4">About Justice & Co.</h1>
+      <p class="text-gray-600 mb-4">
+        Justice & Co. has been defending client rights since 1990 with a passion for justice and commitment to excellence.
+      </p>
+      <p class="text-gray-600">
+        Our attorneys combine decades of experience to fight for your best outcomes.
+      </p>
+    </main>
+    <Footer />
+  </body>
+</html>
