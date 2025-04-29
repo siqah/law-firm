@@ -1,34 +1,36 @@
 ---
-import Header from "../components/Header"
-import Footer from "../components/Footer.astro"
+// Import the contact widget
+import ContactWidget from '../components/ContactWidget.astro';
+import Header from "../components/Header";
+import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Astro Basics</title>
-    </head>
-    <body class="flex flex-col min-h-screen">
-        <Header client:load/>
-        <main class="flex-1">
-            <slot />
-        </main>
-        <Footer />
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Basics</title>
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <Header client:load />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+    <ContactWidget />
+  </body>
 </html>
 
-
 <style>
-	body {
-		margin: 0;
-		font-family: Arial, sans-serif;
-	}
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
 
-	main {
-		padding: 1rem;
-	}
+  main {
+    padding: 1rem;
+  }
 </style>
