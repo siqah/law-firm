@@ -1,21 +1,114 @@
 ---
+// src/pages/contact.astro
 import Header from '../components/Header';
 import Footer from '../components/Footer.astro';
 import ContactForm from '../components/ContactForm';
-import "../styles/global.css";
-
+import contactHero from '../assets/images/contact-hero.jpeg';
+import "../styles/global.css"
 ---
+
 <html lang="en">
-  <head>
-    <title>Contact - Justice & Co.</title>
-    <link rel="stylesheet" href="/src/styles/global.css" />
-  </head>
-  <body class="flex flex-col min-h-screen">
-    <Header client:load/>
-    <main class="flex-grow p-8">
-      <h1 class="text-3xl font-bold mb-6 text-center">Get In Touch</h1>
-      <ContactForm client:load/>
-    </main>
-    <Footer />
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Suge & Company | Advocate</title>
+</head>
+<body class="font-sans bg-gray-50 flex flex-col min-h-screen"
+      style="background-color: #E8D299;"
+>
+  <Header client:load />
+  
+  <!-- Hero Section -->
+  <section class="relative h-[60vh] md:h-[70vh] flex items-center justify-center">
+    <div 
+      class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+      style={`background-image: url(${contactHero.src})`}
+    >
+      <div class="absolute inset-0 bg-black/50"></div>
+    </div>
+    
+    <div class="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto text-white">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 leading-tight">How can we help?</h1>
+      <p class="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 leading-relaxed">
+        Committed Professionals Providing Unmatched Service for<br class="hidden sm:block">
+        Your Defense Needs
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow py-12 md:py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col lg:flex-row gap-8 md:gap-12">
+        <!-- Contact Form Section -->
+        <div class="lg:w-1/2">
+          <div class="bg-white p-6 sm:p-8 md:p-10 rounded-xl shadow-lg">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">Get In Touch</h2>
+            <ContactForm client:load />
+          </div>
+        </div>
+        
+        <!-- Contact Info Section -->
+        <div class="lg:w-1/2">
+          <div class="bg-blue-50 p-6 sm:p-8 md:p-10 rounded-xl h-full shadow-lg">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Our Office</h2>
+            
+            <div class="space-y-4 md:space-y-6">
+              <div class="flex items-start">
+                <div class="bg-blue-100 p-2.5 sm:p-3 rounded-full mr-3 sm:mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-base sm:text-lg font-semibold text-gray-800 mb-1">Headquarters</h3>
+                  <p class="text-sm sm:text-base text-gray-600">123 Legal Avenue, Suite 500<br>Lawyers District, 10001</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="bg-blue-100 p-2.5 sm:p-3 rounded-full mr-3 sm:mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-base sm:text-lg font-semibold text-gray-800 mb-1">Phone</h3>
+                  <p class="text-sm sm:text-base text-gray-600">Main: (123) 456-7890<br>Emergency: (123) 456-7891</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="bg-blue-100 p-2.5 sm:p-3 rounded-full mr-3 sm:mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-base sm:text-lg font-semibold text-gray-800 mb-1">Email</h3>
+                  <p class="text-sm sm:text-base text-gray-600">info@sugecompany.com<br>support@sugecompany.com</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="bg-blue-100 p-2.5 sm:p-3 rounded-full mr-3 sm:mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-base sm:text-lg font-semibold text-gray-800 mb-1">Hours</h3>
+                  <p class="text-sm sm:text-base text-gray-600">Monday-Friday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 2:00 PM<br>Emergency: 24/7</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</body>
 </html>

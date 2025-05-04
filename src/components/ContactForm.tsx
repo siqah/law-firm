@@ -51,7 +51,8 @@ const ContactForm = () => {
         ></textarea>
         <button 
           type="submit" 
-          className="bg-blue-600 text-white p-2 rounded hover:bg-blue-700"
+          className=" text-white p-2 rounded hover:bg-blue-700"
+          style={{ backgroundColor: '#395975', cursor: 'pointer' }}
         >
           Send Message
         </button>

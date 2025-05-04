@@ -1,36 +1,133 @@
 ---
 import teamImg from '../assets/images/legal-team.jpeg';
+import ContactForm from './ContactForm';
 ---
-<section class="bg-gray-100 py-16 px-6 lg:px-0">
-    <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-12">
-      <!-- Left: Text Content -->
-      <div class="flex-1 text-center lg:text-left">
-        <h2 class="text-5xl font-bold text-gray-800 mb-6 leading-tight">
-          Your Trusted Legal Partner for Life’s Toughest Moments
+<section class=" py-12 md:py-20 px-4 sm:px-6 lg:px-8"
+         style="background-color: #AECDE2;"
+>
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+      <!-- left: Text Content -->
+      <div class="flex-1 text-center lg:text-left space-y-6">
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
+          Your Trusted Legal Partner for Life's Toughest Moments
         </h2>
-        <p class="text-lg text-gray-600 mb-4 max-w-xl">
-          With over 20 years of combined experience, our dedicated legal team offers compassionate, strategic, and aggressive representation across family law, business law, criminal defense, and personal injury.
-        </p>
-        <p class="text-lg text-gray-600 mb-4 max-w-xl">
-          We take pride in providing personalized legal solutions tailored to your unique circumstances, ensuring you’re supported every step of the way—from consultation to courtroom.
-        </p>
-        <p class="text-lg text-gray-600 mb-6 max-w-xl">
-          Whether you’re facing a dispute, launching a business, or seeking justice, we stand by your side to protect your rights and pursue the outcome you deserve.
-        </p>
-        <a href="/contact" class="inline-block bg-blue-700 hover:bg-blue-800 text-white text-lg font-semibold px-6 py-3 rounded shadow">
-          Schedule a Free Consultation
-        </a>
+        <div class="space-y-4">
+          <p class="text-base sm:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0">
+            With over 20 years of combined experience, our dedicated legal team offers compassionate, strategic, and aggressive representation across family law, business law, criminal defense, and personal injury.
+          </p>
+          <p class="text-base sm:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0">
+            We take pride in providing personalized legal solutions tailored to your unique circumstances, ensuring you're supported every step of the way—from consultation to courtroom.
+          </p>
+          <p class="text-base sm:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0">
+            Whether you're facing a dispute, launching a business, or seeking justice, we stand by your side to protect your rights and pursue the outcome you deserve.
+          </p>
+        </div>
+        <div class="pt-4">
+          <a href="/contact" class="inline-block  hover:bg-blue-800
+                  text-white text-base sm:text-lg font-semibold px-6 
+                  py-3 rounded-lg shadow-md transition duration-300 
+                  transform hover:scale-105"
+                  onclick="window.location.href='/contact'"
+                  style="background-color: #395975; cursor: pointer;"
+                  >
+            Schedule a Free Consultation
+          </a>
+        </div>
       </div>
-  
-      <!-- Right: Hero Image -->
-      <div class="flex-1">
+
+      <!-- right: Hero Image -->
+      <div class="flex-1 w-full">
         <img 
           src={teamImg.src} 
           alt="Professional law team in office" 
-          class="rounded-lg shadow-lg w-full object-cover max-h-[500px]" 
+          class="rounded-xl shadow-xl w-full h-auto object-cover max-h-[500px] transition duration-300 hover:shadow-2xl" 
           loading="lazy"
         />
       </div>
     </div>
-  </section>
+</section>
+
+<!-- about section -->
+<section class="font-sans py-12 md:py-20 px-4 sm:px-6 lg:px-8" style="background-color: #E8D299;">
+  <main class="max-w-7xl mx-auto">
+    <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+      <!-- Content Section -->
+      <div class="flex-1 space-y-6">
+        <div class="prose max-w-none text-gray-700">
+          <p class="text-base sm:text-lg leading-relaxed">
+            At Suge & Company, we are more than legal professionals — we are 
+            dedicated partners in your pursuit of justice, resolution, and peace 
+            of mind. Founded on the core values of integrity, transparency, and 
+            client-focused service, our firm brings together a team of experienced 
+            attorneys committed to delivering strategic, personalized legal solutions.
+          </p> 
+        </div>
+        <button class="bg-blue-700 hover:bg-blue-800 text-white 
+               font-semibold py-3 px-6 rounded-lg transition duration-300 
+               transform hover:scale-105 shadow-md"
+               style="cursor: pointer; background-color: #395975;"
+               onclick="window.location.href='/about'"
+
+               >
+          READ MORE
+        </button>
+      </div>
+      <!-- Heading with Background Image -->
+      <div class="flex-1 w-full relative max-h-[500px] rounded-xl overflow-hidden bg-[url('../assets/images/about.jpeg')] bg-cover bg-center opacity-90 shadow-xl">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white p-6 sm:p-8 relative z-10 h-full flex flex-col justify-center">
+          Welcome To<br>
+          <span class="text-yellow-300">Suge and Company</span><br>
+          <span class="text-xl sm:text-2xl">Advocate</span>
+        </h1>
+      </div>
+    </div>
+  </main>
+</section>
+
+<!-- practice area section -->
+<section class="font-sans py-12 md:py-20 px-4 sm:px-6 lg:px-8" style="background-color: #AECDE2;">
+  <main class="max-w-7xl mx-auto">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 mb-6">Our Practice Areas</h1>
+  </main>
+</section>
+
+<!-- practice area cards -->
+<section class="font-sans py-12 md:py-20 px-4 sm:px-6 lg:px-8" style="background-color: #AECDE2;">
+  <main class="max-w-7xl mx-auto">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 mb-6">Our Practice Areas</h1>
+  </main>
+</section>
+
+<!-- practice area cards -->
+<section class="font-sans py-12 md:py-20 px-4 sm:px-6 lg:px-8" style="background-color: #AECDE2;">
+  <main class="max-w-7xl mx-auto">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 mb-6">Our Practice Areas</h1>
+  </main>
+</section>
+
   
+<!-- contact section -->
+ <section class="font-sans py-12 md:py-20 px-4 sm:px-6 lg:px-8" style="background-color:#E8D299 ;">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+    <div class="flex-1 w-full">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 mb-6">Contact Us</h1>
+      <p class="text-base sm:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0">
+        We are here to help you with your legal needs. Please contact us to schedule a consultation.
+      </p>
+      <button
+      class="bg-blue-700 hover:bg-blue-800 text-white 
+               font-semibold py-3 px-6 rounded-lg transition duration-300 
+               transform hover:scale-105 shadow-md"
+               style="cursor: pointer; background-color: #395975;"
+               onclick="window.location.href='/contact'"
+
+      >More</button>
+    </div>
+
+    <div class="flex-1 w-full">
+      <ContactForm />
+    </div>
+  </div>
+ </section>
+
