@@ -2,45 +2,44 @@
 import teamImg from '../assets/images/legal-team.jpeg';
 import ContactForm from './ContactForm';
 ---
-<section class=" py-12 md:py-20 px-4 sm:px-6 lg:px-8"
+<section class="py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8"
          style="background-color: #AECDE2;"
 >
-    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-6 lg:gap-12">
       <!-- left: Text Content -->
-      <div class="flex-1 text-center lg:text-left space-y-6">
-        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
+      <div class="flex-1 text-center lg:text-left space-y-4 sm:space-y-6">
+        <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight tracking-tight">
           Your Trusted Legal Partner for Life's Toughest Moments
         </h2>
-        <div class="space-y-4">
-          <p class="text-base sm:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0">
+        <div class="space-y-3 sm:space-y-4">
+          <p class="text-sm sm:text-base md:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
             With over 20 years of combined experience, our dedicated legal team offers compassionate, strategic, and aggressive representation across family law, business law, criminal defense, and personal injury.
           </p>
-          <p class="text-base sm:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0">
+          <p class="text-sm sm:text-base md:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
             We take pride in providing personalized legal solutions tailored to your unique circumstances, ensuring you're supported every step of the way—from consultation to courtroom.
           </p>
-          <p class="text-base sm:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0">
+          <p class="text-sm sm:text-base md:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
             Whether you're facing a dispute, launching a business, or seeking justice, we stand by your side to protect your rights and pursue the outcome you deserve.
           </p>
         </div>
-        <div class="pt-4">
-          <a href="/contact" class="inline-block  hover:bg-blue-800
-                  text-white text-base sm:text-lg font-semibold px-6 
-                  py-3 rounded-lg shadow-md transition duration-300 
-                  transform hover:scale-105"
-                  onclick="window.location.href='/contact'"
-                  style="background-color: #395975; cursor: pointer;"
-                  >
+        <div class="pt-4 sm:pt-6">
+          <a href="/contact" 
+             class="inline-block text-white text-sm sm:text-base md:text-lg font-semibold px-4 sm:px-6 
+                    py-2.5 sm:py-3 rounded-lg shadow-md transition-all duration-300 
+                    hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+             style="background-color: #395975;"
+          >
             Schedule a Free Consultation
           </a>
         </div>
       </div>
 
       <!-- right: Hero Image -->
-      <div class="flex-1 w-full">
+      <div class="flex-1 w-full mt-8 lg:mt-0">
         <img 
           src={teamImg.src} 
           alt="Professional law team in office" 
-          class="rounded-xl shadow-xl w-full h-auto object-cover max-h-[500px] transition duration-300 hover:shadow-2xl" 
+          class="rounded-xl shadow-xl w-full h-auto object-cover max-h-[400px] sm:max-h-[450px] md:max-h-[500px] transition-all duration-300 hover:shadow-2xl" 
           loading="lazy"
         />
       </div>
@@ -48,13 +47,13 @@ import ContactForm from './ContactForm';
 </section>
 
 <!-- about section -->
-<section class="font-sans py-12 md:py-20 px-4 sm:px-6 lg:px-8" style="background-color: #E8D299;">
+<section class="py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8" style="background-color: #E8D299;">
   <main class="max-w-7xl mx-auto">
-    <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+    <div class="flex flex-col lg:flex-row items-center gap-6 lg:gap-12">
       <!-- Content Section -->
-      <div class="flex-1 space-y-6">
+      <div class="flex-1 space-y-4 sm:space-y-6">
         <div class="prose max-w-none text-gray-700">
-          <p class="text-base sm:text-lg leading-relaxed">
+          <p class="text-sm sm:text-base md:text-lg leading-relaxed">
             At Suge & Company, we are more than legal professionals — we are 
             dedicated partners in your pursuit of justice, resolution, and peace 
             of mind. Founded on the core values of integrity, transparency, and 
@@ -62,23 +61,22 @@ import ContactForm from './ContactForm';
             attorneys committed to delivering strategic, personalized legal solutions.
           </p> 
         </div>
-        <button class="bg-blue-700 hover:bg-blue-800 text-white 
-               font-semibold py-3 px-6 rounded-lg transition duration-300 
-               transform hover:scale-105 shadow-md"
-               style="cursor: pointer; background-color: #395975;"
+        <button class="text-white text-sm sm:text-base md:text-lg font-semibold px-4 sm:px-6 
+               py-2.5 sm:py-3 rounded-lg transition-all duration-300 
+               hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 shadow-md"
+               style="background-color: #395975;"
                onclick="window.location.href='/about'"
-
-               >
+        >
           READ MORE
         </button>
       </div>
       <!-- Heading with Background Image -->
-      <div class="flex-1 w-full relative max-h-[500px] rounded-xl overflow-hidden bg-[url('../assets/images/about.jpeg')] bg-cover bg-center opacity-90 shadow-xl">
+      <div class="flex-1 w-full relative max-h-[300px] sm:max-h-[400px] md:max-h-[500px] rounded-xl overflow-hidden bg-[url('../assets/images/about.jpeg')] bg-cover bg-center opacity-90 shadow-xl">
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white p-6 sm:p-8 relative z-10 h-full flex flex-col justify-center">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white p-4 sm:p-6 md:p-8 relative z-10 h-full flex flex-col justify-center">
           Welcome To<br>
           <span class="text-yellow-300">Suge and Company</span><br>
-          <span class="text-xl sm:text-2xl">Advocate</span>
+          <span class="text-lg sm:text-xl md:text-2xl">Advocate</span>
         </h1>
       </div>
     </div>
@@ -86,9 +84,9 @@ import ContactForm from './ContactForm';
 </section>
 
 <!-- practice area section -->
-<section class="font-sans py-12 md:py-20 px-4 sm:px-6 lg:px-8" style="background-color: #AECDE2;">
+<section class="py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8" style="background-color: #AECDE2;">
   <main class="max-w-7xl mx-auto">
-    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 mb-6">Our Practice Areas</h1>
+    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4 sm:mb-6">Our Practice Areas</h1>
   </main>
 </section>
 
@@ -108,26 +106,27 @@ import ContactForm from './ContactForm';
 
   
 <!-- contact section -->
- <section class="font-sans py-12 md:py-20 px-4 sm:px-6 lg:px-8" style="background-color:#E8D299 ;">
-  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
+<section class="py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8" style="background-color:#E8D299;">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-6 lg:gap-12">
     <div class="flex-1 w-full">
-      <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 mb-6">Contact Us</h1>
-      <p class="text-base sm:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4 sm:mb-6">Contact Us</h1>
+      <p class="text-sm sm:text-base md:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0 mb-6">
         We are here to help you with your legal needs. Please contact us to schedule a consultation.
       </p>
       <button
-      class="bg-blue-700 hover:bg-blue-800 text-white 
-               font-semibold py-3 px-6 rounded-lg transition duration-300 
-               transform hover:scale-105 shadow-md"
-               style="cursor: pointer; background-color: #395975;"
-               onclick="window.location.href='/contact'"
-
-      >More</button>
+        class="text-white text-sm sm:text-base md:text-lg font-semibold px-4 sm:px-6 
+               py-2.5 sm:py-3 rounded-lg transition-all duration-300 
+               hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 shadow-md"
+        style="background-color: #395975;"
+        onclick="window.location.href='/contact'"
+      >
+        More
+      </button>
     </div>
 
-    <div class="flex-1 w-full">
+    <div class="flex-1 w-full mt-8 lg:mt-0">
       <ContactForm />
     </div>
   </div>
- </section>
+</section>
 
