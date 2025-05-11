@@ -1,16 +1,17 @@
+import ThemeToggle from './ThemeToggle';
 import { useState } from 'react';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
+    <header className="bg-white dark:bg-gray-800 shadow-md sticky top-0 z-50 transition-colors duration-300">
       {/* Main bar: logo + nav + toggle */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-xl sm:text-2xl font-bold text-gray-800">
+            <h1 className="text-xl sm:text-2xl font-bold text-gray-800 dark:text-white">
               Suge & Company Advocate
             </h1>
           </div>
@@ -19,41 +20,42 @@ export default function Header() {
           <nav className="hidden lg:flex lg:space-x-8">
             <a 
               href="/" 
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
             >
               Home
             </a>
             <a 
               href="/about" 
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
             >
               About
             </a>
             <a 
               href="/practice-areas" 
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
             >
               Practice Areas
             </a>
             <a 
               href="/attorneys" 
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
             >
               Attorneys
             </a>
             <a 
               href="/contact" 
-              className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
             >
               Contact
             </a>
+            <ThemeToggle />
           </nav>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className="lg:hidden flex items-center gap-4">
             <button
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-colors duration-200"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-colors duration-200"
               onClick={() => setOpen(!open)}
               aria-label="Toggle menu"
             >
@@ -102,45 +104,64 @@ export default function Header() {
         role="dialog"
         aria-modal="true"
       >
-        <div className="fixed inset-0 bg-gray-600 bg-opacity-75 transition-opacity" onClick={() => setOpen(false)}></div>
+        <div 
+          className="fixed inset-0 bg-gray-600 bg-opacity-75 transition-opacity" 
+          onClick={() => setOpen(false)}
+        ></div>
         
         <div className="fixed inset-y-0 right-0 max-w-full flex">
           <div className="relative w-screen max-w-xs">
-            <div className="h-full flex flex-col bg-white shadow-xl">
+            <div className="h-full flex flex-col bg-white dark:bg-gray-800 shadow-xl transition-colors duration-300">
               <div className="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
                 <div className="flex-shrink-0 flex items-center px-4">
-                  <h2 className="text-xl font-bold text-gray-800">Menu</h2>
+                  <h2 className="text-xl font-bold text-gray-800 dark:text-white">Menu</h2>
                 </div>
                 <nav className="mt-5 px-2 space-y-1">
                   <a
                     href="/"
-                    className="group flex items-center px-2 py-2 text-base font-medium rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors duration-200"
+                    className="group flex items-center px-2 py-2 text-base font-medium rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
                   >
                     Home
                   </a>
                   <a
                     href="/about"
-                    className="group flex items-center px-2 py-2 text-base font-medium rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors duration-200"
+                    className="group flex items-center px-2 py-2 text-base font-medium rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
                   >
                     About
                   </a>
                   <a
                     href="/practice-areas"
-                    className="group flex items-center px-2 py-2 text-base font-medium rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors duration-200"
+                    className="group flex items-center px-2 py-2 text-base font-medium rounded-md
+                              text-gray-700 dark:text-gray-300 hover:text-blue-600
+                              dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700 
+                              transition-colors duration-200"
                   >
                     Practice Areas
                   </a>
                   <a
                     href="/attorneys"
-                    className="group flex items-center px-2 py-2 text-base font-medium rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors duration-200"
+                    className="group flex items-center px-2 py-2 text-base font-medium rounded-md
+                     text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400
+                      hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
                   >
                     Attorneys
                   </a>
                   <a
                     href="/contact"
-                    className="group flex items-center px-2 py-2 text-base font-medium rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-50 transition-colors duration-200"
+                    className="group flex items-center px-2 py-2 text-base font-medium 
+                    rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600
+                     dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700 
+                     transition-colors duration-200"
                   >
                     Contact
+                  </a>
+                  {/* Theme Toggle Button */}
+                
+                  <a
+                    className="group flex items-center px-2 py-2 text-base font-medium rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
+                  >
+                    Change Theme 
+                    <ThemeToggle />
                   </a>
                 </nav>
               </div>
