@@ -24,46 +24,46 @@ const ContactForm = () => {
   };
 
   return (
-    <div>
-      <form
-        onSubmit={handleSubmit}
-        className="flex flex-col gap-4 max-w-lg mx-auto bg-white p-6 shadow rounded"
-      >
-        <input 
-          name="name" 
-          type="text" 
-          placeholder="Full Name" 
-          className="border p-2 rounded" 
-          required 
-        />
-        <input 
-          name="email" 
-          type="email" 
-          placeholder="Email Address" 
-          className="border p-2 rounded" 
-          required 
-        />
-        <textarea 
-          name="message" 
-          placeholder="Message" 
-          className="border p-2 rounded h-32" 
-          required
-        ></textarea>
-        <button 
-          type="submit" 
-          className=" text-white p-2 rounded hover:bg-blue-700"
-          style={{ backgroundColor: '#395975', cursor: 'pointer' }}
+    <div className="rounded">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col gap-4 max-w-lg mx-auto p-6 shadow rounded"
         >
-          Send Message
-        </button>
-      </form>
+          <input
+            name="name"
+            type="text"
+            placeholder="Full Name"
+            className="border p-2 rounded dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100"
+            required
+          />
+          <input
+            name="email"
+            type="email"
+            placeholder="Email Address"
+            className="border p-2 rounded dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100  "
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Message"
+            className="border p-2 rounded h-32 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100"
+            required
+          ></textarea>
+          <button
+            type="submit"
+            className="text-white p-2 rounded hover:bg-blue-700 transition-colors duration-200 dark:bg-gray-450"
+            style={{ backgroundColor: 'var(--color-primary)' }}
+          >
+            Send Message
+          </button>
+        </form>
 
-      {showSuccessMessage && (
-        <div className="mt-4 p-4 bg-green-500 text-white rounded">
-          Your message has been sent successfully! We'll get back to you shortly.
-        </div>
-      )}
-    </div>
+        {showSuccessMessage && (
+          <div className="mt-4 p-4 bg-green-500 text-white rounded">
+            Your message has been sent successfully! We'll get back to you shortly.
+          </div>
+        )}
+      </div>
   );
 };
 

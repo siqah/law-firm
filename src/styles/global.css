@@ -1,23 +1,62 @@
 @import 'tailwindcss';
-@plugin '@tailwindcss/typography'; 
+@plugin '@tailwindcss/typography';
+
+/* Import professional fonts from Google Fonts */
+/* @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&display=swap'); */
+
+:root {
+  /* Light Theme Colors */
+  --color-primary: #395975;
+  --color-secondary: #decfaa;
+  --color-accent: #AECDE2;
+  
+  /* Font Families */
+  --font-heading: 'Merriweather', 'Source Serif Pro', serif;
+  --font-body: 'Source Serif Pro', 'Merriweather', serif;
+}
+
+.dark {
+  --color-primary: #4a6fa5;
+  --color-secondary: #f0d6a2;
+  --color-accent: #c1d9ee;
+  --color-background: #111827;
+  --color-text: #f3f4f6;
+  /* --color-gray-50: #111827;
+  --color-gray-100: #1f2937;
+  --color-gray-200: #374151;
+  --color-gray-300: #4b5563;
+  --color-gray-400: #6b7280;
+  --color-gray-500: #9ca3af;
+  --color-gray-600: #d1d5db;
+  --color-gray-700: #e5e7eb;
+  --color-gray-800: #f3f4f6;
+  --color-gray-900: #f9fafb; */
+}
+
+body {
+  font-family: var(--font-body, serif);
+  color: var(--color-text);
+  background: var(--color-background);
+  text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading, serif);
+  text-align: left;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 
 
-  .dark .bg-white {
-    @apply bg-gray-800;
-  }
+
+
+
+
   
-  .dark .bg-gray-50 {
-    @apply bg-gray-700;
-  }
   
-  .dark .bg-gray-100 {
-    @apply bg-gray-600;
-  }
-  
-  .dark .bg-blue-50 {
-    @apply bg-blue-900/20;
-  }
   
 
   

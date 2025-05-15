@@ -1,77 +1,108 @@
 ---
-// src/pages/about.astro
-import Header from '../components/Header';
-import Footer from '../components/Footer.astro';
+import SpecialLayout from '../layouts/SpecialLayout.astro';
 import "../styles/global.css"
 ---
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Suge & Company | Advocate</title>
+  <title>Contact - Suge & Company | Advocate</title>
 </head>
-<body class="font-sans" style="background-color: #E8D299;">
-  <Header client:load/>
-  
-  <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
-    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-800 mb-6">About Us</h1>
+<SpecialLayout>
+  <body class="flex flex-col w-full h-full p-16" style="background: var(--color-secondary)">
+  <main class="flex-grow  md:p-16 ">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-gray-800">
+      About Us
+    </h1>
 
-    <section class="mb-12 sm:mb-16 flex flex-col lg:flex-row gap-6 lg:gap-8">
-      <div 
-      class="flex-1 w-full relative h-[300px] sm:h-[400px] lg:h-[500px] rounded-lg overflow-hidden bg-[url('../assets/images/about.jpeg')] bg-cover bg-center opacity-80"
-      >
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white p-4 sm:p-8 relative z-10 h-full flex flex-col justify-center">
-        Welcome To<br>
-        <span class="text-yellow-300">Suge and Company</span><br>
-        <span class="text-xl sm:text-2xl">Advocate</span>
-      </h1>
-    </div>
-      
-      <div class="prose max-w-none text-gray-600 flex-1">
-        <p class="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+    <section class="mb-12 sm:mb-16 flex flex-col lg:flex-row gap-6 lg:gap-8 ">
+      <div class="prose max-w-none flex-1  ">
+        <p class="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6 text-gray-800">
           At Suge & Company, we are more than legal professionals — we are dedicated 
           partners in your pursuit of justice, resolution, and peace of mind. Founded
-           on the core values of integrity, transparency, and client-focused service, 
-           our firm brings together a team of experienced attorneys committed to delivering 
-           strategic, personalized legal solutions.
+          on the core values of integrity, transparency, and client-focused service, 
+          our firm brings together a team of experienced attorneys committed to delivering 
+          strategic, personalized legal solutions.
         </p>
         
-        <p class="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6">
+        <p class="text-base sm:text-lg leading-relaxed mb-4 sm:mb-6 text-gray-800">
           We understand that every case is unique. Whether you're navigating a complex 
           business matter, protecting your family's interests, or seeking justice in a
-           personal dispute, our approach is rooted in clear communication, rigorous preparation,
-            and a deep respect for your time and trust.
+          personal dispute, our approach is rooted in clear communication, rigorous preparation,
+          and a deep respect for your time and trust.
         </p>
         
-        <p class="text-base sm:text-lg leading-relaxed mb-6 sm:mb-8">
+        <p class="text-base sm:text-lg leading-relaxed mb-6 sm:mb-8 text-gray-800">
           With a strong reputation for results and a passion for advocacy, we take pride 
           in standing by our clients through every step of their legal journey. At Suge & 
           Company, you're not just another case — you're a valued client, and your goals are our mission.
         </p>
       </div>
       
+      <div class="flex-1 w-full relative h-[300px] sm:h-[400px] lg:h-[500px] rounded-lg overflow-hidden bg-[url('../assets/images/about.jpeg')] bg-cover bg-center opacity-90">
+        <div class="absolute inset-0 bg-black bg-opacity-30 dark:bg-opacity-50"></div>
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold p-4 sm:p-8 relative z-10 h-full flex flex-col justify-center text-white">
+          Welcome To<br>
+          <span class="text-yellow-300">Suge and Company</span><br>
+          <span class="text-xl sm:text-2xl">Advocate</span>
+        </h1>
+      </div>
     </section>
     
-    <section class="bg-blue-50 p-4 sm:p-8 rounded-xl">
-      <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">Our Core Values</h2>
+    <section class="bg-blue-50 dark:bg-gray-800 p-4 sm:p-8 rounded-xl">
+      <h2 class="text-xl sm:text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4 sm:mb-6">
+        Our Core Values
+      </h2>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-        <div class="bg-white p-4 sm:p-6 rounded-lg shadow-sm">
-          <h3 class="text-lg sm:text-xl font-semibold text-blue-700 mb-2">Integrity</h3>
-          <p class="text-sm sm:text-base text-gray-600">We uphold the highest ethical standards in all our dealings.</p>
+        <div class="bg-white dark:bg-gray-700 p-4 sm:p-6 rounded-lg shadow-sm">
+          <h3 class="text-lg sm:text-xl font-semibold text-blue-700 dark:text-blue-400 mb-2">
+            Integrity
+          </h3>
+          <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300">
+            We uphold the highest ethical standards in all our dealings.
+          </p>
         </div>
-        <div class="bg-white p-4 sm:p-6 rounded-lg shadow-sm">
-          <h3 class="text-lg sm:text-xl font-semibold text-blue-700 mb-2">Transparency</h3>
-          <p class="text-sm sm:text-base text-gray-600">Clear communication and honesty in every client relationship.</p>
+        <div class="bg-white dark:bg-gray-700 p-4 sm:p-6 rounded-lg shadow-sm">
+          <h3 class="text-lg sm:text-xl font-semibold text-blue-700 dark:text-blue-400 mb-2">
+            Transparency
+          </h3>
+          <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300">
+            Clear communication and honesty in every client relationship.
+          </p>
         </div>
-        <div class="bg-white p-4 sm:p-6 rounded-lg shadow-sm">
-          <h3 class="text-lg sm:text-xl font-semibold text-blue-700 mb-2">Client Focus</h3>
-          <p class="text-sm sm:text-base text-gray-600">Your needs and goals are at the center of everything we do.</p>
+        <div class="bg-white dark:bg-gray-700 p-4 sm:p-6 rounded-lg shadow-sm">
+          <h3 class="text-lg sm:text-xl font-semibold text-blue-700 dark:text-blue-400 mb-2">
+            Client Focus
+          </h3>
+          <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300">
+            Your needs and goals are at the center of everything we do.
+          </p>
         </div>
       </div>
     </section>
   </main>
-  
-  <Footer />
-</body>
+  </body>
+</SpecialLayout>
 </html>
+
+<style is:global>
+  /* Enhanced dark mode transitions */
+  html {
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Image overlay adjustment for dark mode */
+  .dark .bg-cover::after {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Prose content in dark mode */
+  .dark .prose {
+    color: var(--color-gray-300);
+  }
+  
+  .dark .prose strong {
+    color: var(--color-gray-100);
+  }
+</style>

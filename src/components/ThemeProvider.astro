@@ -1,0 +1,41 @@
+---
+// src/components/ThemeProvider.astro
+import { themeConfig } from '../../theme.config';
+---
+
+<!-- Client-side script -->
+<script is:inline>
+  // Get initial theme
+  let theme = 'light';
+  if (typeof window !== 'undefined') {
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+  }
+
+  // Toggle function
+  window.toggleTheme = () => {
+    theme = theme === 'light' ? 'dark' : 'light';
+    localStorage.setItem('theme', theme);
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+    
+    // Dispatch event for other components to listen to
+    document.dispatchEvent(new CustomEvent('themeChanged', { detail: theme }));
+  };
+</script>
+
+<!-- Container div with theme class -->
+<div class={`theme-${Astro.props.theme || 'light'}`} data-theme={Astro.props.theme || 'light'}>
+  <slot />
+</div>
+
+
+    --color-primary: ${themeConfig.colors.dark.primary};
+    --color-secondary: ${themeConfig.colors.dark.secondary};
+    --color-accent: ${themeConfig.colors.dark.accent};
+    --color-background: ${themeConfig.colors.dark.background};
+    --color-text: ${themeConfig.colors.dark.text};
+    ${Object.entries(themeConfig.colors.dark.gray).map(([key, value]) => `--color-gray-${key}: ${value};`).join('\n    ')}
+  }
+</style>

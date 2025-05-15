@@ -1,25 +1,193 @@
 ---
 import "../styles/global.css";
-import Header from '../components/Header';
-import Footer from '../components/Footer.astro';
+import Layout from '../layouts/Layout.astro';
+import SpecialLayout from "../layouts/SpecialLayout.astro";
 ---
+
 <html lang="en">
   <head>
-    <title>Practice Areas - Justice & Co.</title>
+    <title>Practice Areas - Justice & Co. Law Firm</title>
+    <meta name="description" content="Explore our comprehensive legal services in criminal defense, family law, personal injury, business law, and employment law." />
     <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      body { 
+        font-family: 'Source Serif Pro', serif;
+        line-height: 1.6;
+      }
+      .practice-area-card {
+        transition: all 0.3s ease;
+        border-left: 4px solid var(--color-primary);
+      }
+      .practice-area-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      }
+    </style>
   </head>
-  <body class="flex flex-col min-h-screen">
-    <Header client:load/>
-    <main class="flex-grow p-8 max-w-4xl mx-auto">
-      <h1 class="text-3xl font-bold mb-4">Our Practice Areas</h1>
-      <ul class="list-disc ml-8 text-gray-700 space-y-2">
-        <li>Criminal Defense</li>
-        <li>Family Law</li>
-        <li>Personal Injury</li>
-        <li>Business Law</li>
-        <li>Employment Law</li>
-      </ul>
+  <SpecialLayout>
+  <body class="flex flex-col min-h-screen" style="background: var(--color-primary); color: var(--color-text);">
+    <main class="flex-grow p-6 md:p-8 max-w-6xl mx-auto space-y-8">
+      <section class=" ml-0 text-center mb-12">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4" style="font-family: 'Merriweather', serif;">
+          Our Practice Areas
+        </h1>
+        <p class=" ml-0 max-w-2xl mx-auto text-lg sm:text-xl ">
+          At Suge & Company Advocate, we provide expert legal counsel across multiple practice areas. 
+          Our experienced attorneys are dedicated to delivering personalized solutions for your legal needs.
+        </p>
+      </section>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Criminal Defense -->
+        <div class="practice-area-card bg- dark:bg-gray-800 p-6 rounded-lg shadow-md">
+          <h2 class="text-2xl font-semibold mb-3 flex items-center">
+            <svg class="w-6 h-6 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+            Criminal Defense
+          </h2>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">
+            Comprehensive defense strategies for all criminal charges, from misdemeanors to serious felonies.
+          </p>
+          <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+            <li class="flex items-center">
+              <span class="w-2 h-2 mr-2 bg-blue-500 rounded-full"></span>
+              DUI/DWI Defense
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 mr-2 bg-blue-500 rounded-full"></span>
+              Drug Charges
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 mr-2 bg-blue-500 rounded-full"></span>
+              White Collar Crimes
+            </li>
+          </ul>
+        </div>
+
+        <!-- Family Law -->
+        <div class="practice-area-card bg-gray-400 dark:bg-gray-800 p-6 rounded-lg shadow-md">
+          <h2 class="text-2xl font-semibold mb-3 flex items-center">
+            <svg class="w-6 h-6 mr-2 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+            Family Law
+          </h2>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">
+            Compassionate guidance through divorce, child custody, and other family-related legal matters.
+          </p>
+          <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+            <li class="flex items-center">
+              <span class="w-2 h-2 mr-2 bg-pink-500 rounded-full"></span>
+              Divorce Proceedings
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 mr-2 bg-pink-500 rounded-full"></span>
+              Child Custody & Support
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 mr-2 bg-pink-500 rounded-full"></span>
+              Adoption Services
+            </li>
+          </ul>
+        </div>
+
+        <!-- Personal Injury -->
+        <div class="practice-area-card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+          <h2 class="text-2xl font-semibold mb-3 flex items-center">
+            <svg class="w-6 h-6 mr-2 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            Personal Injury
+          </h2>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">
+            Aggressive representation for accident victims to ensure you receive fair compensation.
+          </p>
+          <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+            <li class="flex items-center">
+              <span class="w-2 h-2 mr-2 bg-red-500 rounded-full"></span>
+              Car Accidents
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 mr-2 bg-red-500 rounded-full"></span>
+              Workplace Injuries
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 mr-2 bg-red-500 rounded-full"></span>
+              Medical Malpractice
+            </li>
+          </ul>
+        </div>
+
+        <!-- Business Law -->
+        <div class="practice-area-card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+          <h2 class="text-2xl font-semibold mb-3 flex items-center">
+            <svg class="w-6 h-6 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+            Business Law
+          </h2>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">
+            Strategic legal solutions for businesses of all sizes, from startups to corporations.
+          </p>
+          <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+            <li class="flex items-center">
+              <span class="w-2 h-2 mr-2 bg-green-500 rounded-full"></span>
+              Business Formation
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 mr-2 bg-green-500 rounded-full"></span>
+              Contracts & Agreements
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 mr-2 bg-green-500 rounded-full"></span>
+              Mergers & Acquisitions
+            </li>
+          </ul>
+        </div>
+
+        <!-- Employment Law -->
+        <div class="practice-area-card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+          <h2 class="text-2xl font-semibold mb-3 flex items-center">
+            <svg class="w-6 h-6 mr-2 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            Employment Law
+          </h2>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">
+            Protection for both employers and employees in workplace-related legal matters.
+          </p>
+          <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+            <li class="flex items-center">
+              <span class="w-2 h-2 mr-2 bg-purple-500 rounded-full"></span>
+              Discrimination Claims
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 mr-2 bg-purple-500 rounded-full"></span>
+              Wage Disputes
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 mr-2 bg-purple-500 rounded-full"></span>
+              Wrongful Termination
+            </li>
+          </ul>
+        </div>
+
+        <!-- Consultation CTA -->
+        <div class="practice-area-card bg-gradient-to-br from-blue-200 to-blue-400 p-6 rounded-lg shadow-md text-white">
+          <h2 class="text-2xl font-semibold mb-3">Need Legal Help?</h2>
+          <p class="mb-4">
+            Not sure which service you need? Schedule a free consultation with one of our attorneys.
+          </p>
+          <a href="/contact" class="inline-block mt-4 px-6 py-2 bg-white text-blue-700 rounded-md font-medium hover:bg-blue-50 transition-colors">
+            Contact Us
+          </a>
+        </div>
+      </div>
     </main>
-    <Footer />
   </body>
+  </SpecialLayout>
 </html>
