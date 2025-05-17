@@ -1,18 +1,16 @@
 ---
 import "../styles/global.css";
-import Layout from '../layouts/Layout.astro';
-import SpecialLayout from "../layouts/SpecialLayout.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <html lang="en">
   <head>
     <title>Practice Areas - Justice & Co. Law Firm</title>
     <meta name="description" content="Explore our comprehensive legal services in criminal defense, family law, personal injury, business law, and employment law." />
-    <link rel="stylesheet" href="/src/styles/global.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
-    <style>
+    <style scoped>
       body { 
         font-family: 'Source Serif Pro', serif;
         line-height: 1.6;
@@ -27,7 +25,7 @@ import SpecialLayout from "../layouts/SpecialLayout.astro";
       }
     </style>
   </head>
-  <SpecialLayout>
+  <Layout>
   <body class="flex flex-col min-h-screen" style="background: var(--color-primary); color: var(--color-text);">
     <main class="flex-grow p-6 md:p-8 max-w-6xl mx-auto space-y-8">
       <section class=" ml-0 text-center mb-12">
@@ -189,5 +187,5 @@ import SpecialLayout from "../layouts/SpecialLayout.astro";
       </div>
     </main>
   </body>
-  </SpecialLayout>
+  </Layout>
 </html>

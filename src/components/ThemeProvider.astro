@@ -30,12 +30,12 @@ import { themeConfig } from '../../theme.config';
   <slot />
 </div>
 
-
+<style is:global>
     --color-primary: ${themeConfig.colors.dark.primary};
     --color-secondary: ${themeConfig.colors.dark.secondary};
     --color-accent: ${themeConfig.colors.dark.accent};
     --color-background: ${themeConfig.colors.dark.background};
     --color-text: ${themeConfig.colors.dark.text};
     ${Object.entries(themeConfig.colors.dark.gray).map(([key, value]) => `--color-gray-${key}: ${value};`).join('\n    ')}
-  }
+  
 </style>

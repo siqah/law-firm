@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import SpecialLayout from "../layouts/SpecialLayout.astro";
+import Layout from "../layouts/Layout.astro";
 import LegalTeam from "../assets/images/legal-team.jpeg";
 import Lawyer1 from "../assets/images/lawyer1.jpeg";
 import Lawyer2 from "../assets/images/lawyer2.jpeg";
@@ -10,11 +10,10 @@ import Lawyer2 from "../assets/images/lawyer2.jpeg";
   <head>
     <title>Our Attorneys - Justice & Co. Law Firm</title>
     <meta name="description" content="Meet our team of experienced attorneys specializing in criminal defense, family law, personal injury, business law, and employment law." />
-    <link rel="stylesheet" href="/src/styles/global.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
-    <style>
+    <style is:global>
       body { 
         font-family: 'Source Serif Pro', serif;
         line-height: 1.6;
@@ -42,7 +41,7 @@ import Lawyer2 from "../assets/images/lawyer2.jpeg";
       }
     </style>
   </head>
-  <SpecialLayout>
+  <Layout>
   <body class="flex flex-col min-h-screen" style="background: var(--color-primary); color: var(--color-text);">
     <main class="flex-grow px-4 py-8 md:px-8 max-w-7xl mx-auto">
       <section class="text-center mb-16">
@@ -195,5 +194,5 @@ import Lawyer2 from "../assets/images/lawyer2.jpeg";
       </section>
     </main>
   </body>
-  </SpecialLayout>
+  </Layout>
 </html>

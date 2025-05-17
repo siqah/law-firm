@@ -1,5 +1,5 @@
 ---
-import SpecialLayout from '../layouts/SpecialLayout.astro';
+import Layout from '../layouts/Layout.astro';
 import ContactForm from '../components/ContactForm';
 import "../styles/global.css"
 ---
@@ -10,7 +10,7 @@ import "../styles/global.css"
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Suge & Company | Advocate</title>
 </head>
-<SpecialLayout>
+<Layout>
   <body 
   style="background: var(--color-primary); color: var(--color-text);"
   class="flex flex-col min-h-screen " :class="{ 'dark': $theme === 'dark' }">
@@ -86,5 +86,5 @@ import "../styles/global.css"
     </div>
   </main>
 </body>
-</SpecialLayout>
+</Layout>
 </html>
