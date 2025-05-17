@@ -1,13 +1,15 @@
 ---
 import teamImg from '../assets/images/legal-team.jpeg';
 import ContactForm from './ContactForm';
+import LegalTeam from "../assets/images/legal-team.jpeg";
+
 ---
 
 <!-- Hero Section -->
 <section class="w-ful" style="background: var(--color-primary); color: var(--color-text); font-family: 'Source Serif Pro', serif;">
   <div class="px-4 sm:px-6 lg:px-8 py-12 mx-auto max-w-7xl flex flex-col lg:flex-row items-center gap-6 lg:gap-12">
     <!-- Left: Text Content -->
-    <div class="flex-1 text-center lg:text-left space-y-4 sm:space-y-6">
+    <div class="flex-1 text-left space-y-4 sm:space-y-6">
       <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight" style="font-family: 'Merriweather', serif; color: var(--color-text);">
         Your Trusted Legal Partner for Life's Toughest Moments
       </h2>
@@ -22,12 +24,15 @@ import ContactForm from './ContactForm';
           Whether you're facing a dispute, launching a business, or seeking justice, we stand by your side to protect your rights and pursue the outcome you deserve.
         </p>
       </div>
-      <div class="pt-4 sm:pt-6">
+      <div class="pt-4 sm:pt-6 ">
         <a href="/contact" 
-           class="inline-block text-white dark:text-gray-450 text-sm sm:text-base md:text-lg font-semibold px-4 sm:px-6 
-                  py-2.5 sm:py-3 rounded-lg shadow-md transition-all duration-300 
-                  hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-           style="background-color: #395975; "
+           class="block sm:inline-block w-full sm:w-auto text-center sm:text-left 
+                  text-sm sm:text-base md:text-lg font-semibold cursor-pointer
+                  px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg shadow-md transition-all duration-300
+                   hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2
+                    focus:ring-blue-500
+                    dark:bg-gray-700"
+           
         >
           Schedule a Free Consultation
         </a>
@@ -63,7 +68,7 @@ import ContactForm from './ContactForm';
           </p> 
         </div>
         <button class="text-white dark:text-gray-700 text-sm sm:text-base md:text-lg font-semibold px-4 sm:px-6 
-               py-2.5 sm:py-3 rounded-lg transition-all duration-300 
+               py-2.5 sm:py-3 rounded-lg transition-all duration-300 cursor-pointer
                hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 shadow-md"
                style="background-color: #395975;"
                onclick="window.location.href='/about'"
@@ -89,66 +94,104 @@ import ContactForm from './ContactForm';
     <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-8 sm:mb-12 text-center">Our Practice Areas</h1>
     
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-      <div class="bg-gray-400 rounded-xl shadow-lg p-6 sm:p-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
-        <div class="h-12 w-12 bg-[#395975] rounded-lg flex items-center justify-center mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+      <div class="practice-area-card bg- dark:bg-gray-800 p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold mb-3 flex items-center">
+          <svg class="w-6 h-6 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
           </svg>
-        </div>
-        <h3 class="text-xl sm:text-2xl font-bold text-gray-600 mb-3">Family Law</h3>
-        <p class="text-gray-600 text-sm sm:text-base">Expert guidance in divorce, child custody, adoption, and family-related legal matters with a compassionate approach.</p>
+          Criminal Defense
+        </h2>
+        <p class="mb-4 text-gray-700 dark:text-gray-300">
+          Comprehensive defense strategies for all criminal charges, from misdemeanors to serious felonies.
+        </p>
+        <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+          <li class="flex items-center">
+            <span class="w-2 h-2 mr-2 bg-blue-500 rounded-full"></span>
+            DUI/DWI Defense
+          </li>
+          <li class="flex items-center">
+            <span class="w-2 h-2 mr-2 bg-blue-500 rounded-full"></span>
+            Drug Charges
+          </li>
+          <li class="flex items-center">
+            <span class="w-2 h-2 mr-2 bg-blue-500 rounded-full"></span>
+            White Collar Crimes
+          </li>
+        </ul>
       </div>
 
-      <div class="bg-gray-400 rounded-xl shadow-lg p-6 sm:p-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
-        <div class="h-12 w-12 bg-[#395975] rounded-lg flex items-center justify-center mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-          </svg>
+        <!-- Family Law -->
+        <div class="practice-area-card bg-gray-400 dark:bg-gray-800 p-6 rounded-lg shadow-md">
+          <h2 class="text-2xl font-semibold mb-3 flex items-center">
+            <svg class="w-6 h-6 mr-2 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+            Family Law
+          </h2>
+          <p class="mb-4 text-gray-700 dark:text-gray-300">
+            Compassionate guidance through divorce, child custody, and other family-related legal matters.
+          </p>
+          <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+            <li class="flex items-center">
+              <span class="w-2 h-2 mr-2 bg-pink-500 rounded-full"></span>
+              Divorce Proceedings
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 mr-2 bg-pink-500 rounded-full"></span>
+              Child Custody & Support
+            </li>
+            <li class="flex items-center">
+              <span class="w-2 h-2 mr-2 bg-pink-500 rounded-full"></span>
+              Adoption Services
+            </li>
+          </ul>
         </div>
-        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3">Business Law</h3>
-        <p class="text-gray-600 text-sm sm:text-base">Comprehensive legal services for businesses, including formation, contracts, mergers, and compliance matters.</p>
-      </div>
 
-      <div class="bg-gray-400 rounded-xl shadow-lg p-6 sm:p-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
-        <div class="h-12 w-12 bg-[#395975] rounded-lg flex items-center justify-center mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-          </svg>
-        </div>
-        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3">Criminal Defense</h3>
-        <p class="text-gray-600 text-sm sm:text-base">Aggressive defense representation for criminal cases, protecting your rights and ensuring fair treatment.</p>
-      </div>
+           <!-- Personal Injury -->
+           <div class="practice-area-card bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-3 flex items-center">
+              <svg class="w-6 h-6 mr-2 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Personal Injury
+            </h2>
+            <p class="mb-4 text-gray-700 dark:text-gray-300">
+              Aggressive representation for accident victims to ensure you receive fair compensation.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <li class="flex items-center">
+                <span class="w-2 h-2 mr-2 bg-red-500 rounded-full"></span>
+                Car Accidents
+              </li>
+              <li class="flex items-center">
+                <span class="w-2 h-2 mr-2 bg-red-500 rounded-full"></span>
+                Workplace Injuries
+              </li>
+              <li class="flex items-center">
+                <span class="w-2 h-2 mr-2 bg-red-500 rounded-full"></span>
+                Medical Malpractice
+              </li>
+            </ul>
+          </div>
 
-      <div class="bg-gray-400 rounded-xl shadow-lg p-6 sm:p-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
-        <div class="h-12 w-12 bg-[#395975] rounded-lg flex items-center justify-center mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-          </svg>
-        </div>
-        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3">Personal Injury</h3>
-        <p class="text-gray-600 text-sm sm:text-base">Dedicated representation for accident victims, fighting for fair compensation and justice.</p>
-      </div>
+     
 
-      <div class="bg-gray-400 rounded-xl shadow-lg p-6 sm:p-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
-        <div class="h-12 w-12 bg-[#395975] rounded-lg flex items-center justify-center mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-          </svg>
-        </div>
-        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3">Real Estate Law</h3>
-        <p class="text-gray-600 text-sm sm:text-base">Expert guidance in property transactions, disputes, and real estate development matters.</p>
-      </div>
+    
 
-      <div class="bg-gray-400 rounded-xl shadow-lg p-6 sm:p-8 transition-all duration-300 hover:shadow-xl hover:scale-[1.02]">
-        <div class="h-12 w-12 bg-[#395975] rounded-lg flex items-center justify-center mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-          </svg>
-        </div>
-        <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3">Estate Planning</h3>
-        <p class="text-gray-600 text-sm sm:text-base">Comprehensive estate planning services including wills, trusts, and probate administration.</p>
-      </div>
+     
+
+      
+
     </div>
+    <button
+    class="text-white ml-0 text-sm sm:text-base md:text-lg font-semibold px-4 sm:px-6 mt-4 
+           py-2.5 sm:py-3 rounded-lg transition-all duration-300 cursor-pointer
+           hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 shadow-md"
+    style="background-color: #395975;"
+    onclick="window.location.href='/practice-areas'"
+  >
+    More
+  </button>
   </div>
 </section>
 
@@ -168,7 +211,7 @@ import ContactForm from './ContactForm';
       </p>
       <button
         class="text-white ml-0 text-sm sm:text-base md:text-lg font-semibold px-4 sm:px-6 
-               py-2.5 sm:py-3 rounded-lg transition-all duration-300 
+               py-2.5 sm:py-3 rounded-lg transition-all duration-300 cursor-pointer
                hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 shadow-md"
         style="background-color: #395975;"
         onclick="window.location.href='/contact'"
@@ -179,6 +222,59 @@ import ContactForm from './ContactForm';
 
     <div class="flex-1 w-full mt-8 lg:mt-0">  
     <ContactForm />
+    </div>
+  </div>
+</section>
+
+<section class="w-full" style="background: var(--color-primary); color: var(--color-text); font-family: 'Source Serif Pro', serif;">
+  <div class="px-4 sm:px-6 lg:px-8 py-16 mx-auto max-w-7xl flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+    <!-- Left: Text Content -->
+    <div class="flex-1 text-left space-y-6">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight" style="font-family: 'Merriweather', serif;">
+        Skilled Advocates, <span class="text-blue-300">Personalized</span> Representation
+      </h2>
+      
+      <div class="space-y-6">
+        <p class="text-lg sm:text-xl leading-relaxed">
+          At <strong>Suge & Company Advocate</strong>, we combine <strong>decades of collective experience</strong> with a client-first philosophy. 
+          Our attorneys have successfully handled <strong>500+ cases</strong>, from high-stakes corporate disputes to sensitive family law matters.
+        </p>
+        
+        <p class="text-lg sm:text-xl leading-relaxed">
+          Recognized by <strong>Legal 500</strong> and <strong>Chambers & Partners</strong>, our team includes former prosecutors, 
+          certified mediators, and specialists in niche areas like <strong>intellectual property</strong> and <strong>international arbitration</strong>.
+        </p>
+        
+        <ul class="space-y-3 list-disc pl-5 text-lg sm:text-xl">
+          <li><strong>Multilingual</strong> team serving clients in English, Spanish, and French</li>
+          <li><strong>Free initial consultations</strong> for all practice areas</li>
+          <li><strong>24/7 availability</strong> for urgent legal matters</li>
+        </ul>
+      </div>
+      
+      <div class="flex flex-col sm:flex-row gap-4 pt-4">
+        <a href="/contact" 
+           class="inline-block text-center text-blue-100 border border-blue-300 text-sm sm:text-base md:text-lg 
+                  font-semibold px-6 py-3 rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors">
+          Schedule a Free Consultation
+        </a>
+        <a href="/attorneys" 
+           class="inline-block text-center text-blue-100 border border-blue-300 text-sm sm:text-base md:text-lg 
+                  font-semibold px-6 py-3 rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors">
+          Check out our attorneys
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: Team Image -->
+    <div class="flex-1 w-full relative">
+      <img 
+        src={LegalTeam.src} 
+        alt="Suge & Company legal team discussing case strategy" 
+        class="rounded-xl shadow-2xl w-full h-auto object-cover max-h-[500px] lg:max-h-[600px] 
+               border-4 border-white/20 hover:shadow-2xl transition-all duration-500" 
+        loading="lazy"
+      />
     </div>
   </div>
 </section>
