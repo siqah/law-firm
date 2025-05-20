@@ -1,16 +1,13 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
-/* Import professional fonts from Google Fonts */
-/* @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&display=swap'); */
-
 :root {
   --color-primary: #395975;
   --color-secondary: #decfaa;
   --color-accent: #AECDE2;
   
-  --font-heading: 'Merriweather', 'Source Serif Pro', serif;
-  --font-body: 'Source Serif Pro', 'Merriweather', serif;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Open Sans', sans-serif;
 }
 
 .dark {
@@ -38,16 +35,9 @@ h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box;
 }
 
-
-
-
-
-
-
   
   
   
 
   
     
-

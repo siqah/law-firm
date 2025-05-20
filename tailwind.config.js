@@ -10,6 +10,10 @@ module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Open Sans', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
+      },
       colors: {
         primary: {
           DEFAULT: 'var(--color-primary)',
